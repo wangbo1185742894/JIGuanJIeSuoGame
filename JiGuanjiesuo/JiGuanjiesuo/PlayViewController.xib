@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayViewController">
+            <connections>
+                <outlet property="playContentView" destination="uNE-J8-t4C" id="Dyb-Ug-28l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNE-J8-t4C">
+                    <rect key="frame" x="37" y="0.0" width="625" height="375"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playback.png" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-bn-Oyr">
+                            <rect key="frame" x="0.0" y="0.0" width="625" height="375"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uNE-J8-t4C" secondAttribute="height" multiplier="10:6" id="8Ld-Qx-mzl"/>
+                        <constraint firstAttribute="bottom" secondItem="S2O-bn-Oyr" secondAttribute="bottom" id="FTu-t5-W78"/>
+                        <constraint firstAttribute="trailing" secondItem="S2O-bn-Oyr" secondAttribute="trailing" id="GTR-Ko-XJt"/>
+                        <constraint firstItem="S2O-bn-Oyr" firstAttribute="top" secondItem="uNE-J8-t4C" secondAttribute="top" id="gsy-H1-Nbi"/>
+                        <constraint firstItem="S2O-bn-Oyr" firstAttribute="leading" secondItem="uNE-J8-t4C" secondAttribute="leading" id="vTa-ME-5nC"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izw-EC-01t">
+                    <rect key="frame" x="0.0" y="324" width="37" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="ECX-Xi-Yik"/>
+                    </constraints>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="acitionBack:" destination="-1" eventType="touchUpInside" id="V4Z-MX-kxe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1967005076142132" green="0.18732141232652055" blue="0.17388256176595449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uNE-J8-t4C" secondAttribute="bottom" id="9Ay-ee-GOS"/>
+                <constraint firstAttribute="trailing" secondItem="uNE-J8-t4C" secondAttribute="trailing" constant="5" id="MXy-Mi-9cB"/>
+                <constraint firstItem="uNE-J8-t4C" firstAttribute="leading" secondItem="Izw-EC-01t" secondAttribute="trailing" id="bjB-f8-tWS"/>
+                <constraint firstAttribute="bottom" secondItem="Izw-EC-01t" secondAttribute="bottom" constant="10" id="goc-6T-Qmf"/>
+                <constraint firstItem="uNE-J8-t4C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hal-GF-PlP"/>
+                <constraint firstItem="Izw-EC-01t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mgu-43-qlJ"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="75.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="playback.png" width="939" height="561"/>
+    </resources>
+</document>
