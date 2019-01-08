@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0A73CE21E4CB3000FEFA17 /* changePosN.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D0A73CC21E4CB3000FEFA17 /* changePosN.png */; };
+		2D0A73CF21E4CB3000FEFA17 /* changePosS.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D0A73CD21E4CB3000FEFA17 /* changePosS.png */; };
+		2D0A73D221E4CB6300FEFA17 /* ChangePos.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A73D121E4CB6300FEFA17 /* ChangePos.m */; };
 		2D1DCB051F3A9C7600232836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DCB041F3A9C7600232836 /* main.m */; };
 		2D1DCB081F3A9C7600232836 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DCB071F3A9C7600232836 /* AppDelegate.m */; };
 		2D1DCB101F3A9C7600232836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1DCB0F1F3A9C7600232836 /* Assets.xcassets */; };
@@ -116,6 +119,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0A73CC21E4CB3000FEFA17 /* changePosN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changePosN.png; sourceTree = "<group>"; };
+		2D0A73CD21E4CB3000FEFA17 /* changePosS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changePosS.png; sourceTree = "<group>"; };
+		2D0A73D021E4CB6300FEFA17 /* ChangePos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePos.h; sourceTree = "<group>"; };
+		2D0A73D121E4CB6300FEFA17 /* ChangePos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePos.m; sourceTree = "<group>"; };
 		2D1DCB001F3A9C7600232836 /* JiGuanjiesuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiGuanjiesuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1DCB041F3A9C7600232836 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D1DCB061F3A9C7600232836 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -312,6 +319,8 @@
 		2D1DCB4A1F3AAAAD00232836 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2D0A73CC21E4CB3000FEFA17 /* changePosN.png */,
+				2D0A73CD21E4CB3000FEFA17 /* changePosS.png */,
 				2DAD8F351F459CE10016B247 /* launchScreen.png */,
 				2DAD8F031F3C976C0016B247 /* 4_pass_line_2.png */,
 				2DAD8F041F3C976C0016B247 /* 4_pass_line_1.png */,
@@ -425,6 +434,8 @@
 				2D1DCBB11F3B1F0400232836 /* BtnPassLine.m */,
 				2DAD8F0B1F3CA3EB0016B247 /* PassAllLight.h */,
 				2DAD8F0C1F3CA3EB0016B247 /* PassAllLight.m */,
+				2D0A73D021E4CB6300FEFA17 /* ChangePos.h */,
+				2D0A73D121E4CB6300FEFA17 /* ChangePos.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -508,7 +519,7 @@
 				TargetAttributes = {
 					2D1DCAFF1F3A9C7600232836 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8RE52F5T9U;
+						DevelopmentTeam = M7JT4ZMJ42;
 						ProvisioningStyle = Automatic;
 					};
 					2D1DCB181F3A9C7600232836 = {
@@ -584,11 +595,13 @@
 				2DAD8F251F3D77890016B247 /* 3_disable_select_0.png in Resources */,
 				2D1DCB6D1F3AAABC00232836 /* 3_nomal_3.png in Resources */,
 				2D1DCB701F3AAABC00232836 /* 3_nomal_1.png in Resources */,
+				2D0A73CF21E4CB3000FEFA17 /* changePosS.png in Resources */,
 				2D1DCB491F3AA56E00232836 /* playConfig.plist in Resources */,
 				2D1DCB711F3AAABC00232836 /* 2_select_2.png in Resources */,
 				2DAD8F091F3C976C0016B247 /* 4_pass_line_0.png in Resources */,
 				2DAD8F121F3D537E0016B247 /* 4_pass_0.png in Resources */,
 				2D1DCBCF1F3C2B5B00232836 /* 4_pass_disablenomal.png in Resources */,
+				2D0A73CE21E4CB3000FEFA17 /* changePosN.png in Resources */,
 				2DAD8F231F3D77890016B247 /* 3_disable_select_1.png in Resources */,
 				2D1DCB831F3AAABC00232836 /* 1_select_0.png in Resources */,
 				2D1DCB7A1F3AAABC00232836 /* recive_4.png in Resources */,
@@ -651,6 +664,7 @@
 			files = (
 				2D1DCB9D1F3AF77B00232836 /* LightGrain.m in Sources */,
 				2D1DCB3E1F3A9CD200232836 /* SelectViewController.m in Sources */,
+				2D0A73D221E4CB6300FEFA17 /* ChangePos.m in Sources */,
 				2D1DCB911F3AABF800232836 /* UIView+MJExtension.m in Sources */,
 				2D1DCBB21F3B1F0400232836 /* BtnPassLine.m in Sources */,
 				2D1DCBA31F3B118200232836 /* BtnAcceptor.m in Sources */,
@@ -802,9 +816,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8RE52F5T9U;
+				DEVELOPMENT_TEAM = M7JT4ZMJ42;
 				INFOPLIST_FILE = JiGuanjiesuo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.text;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -818,9 +832,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8RE52F5T9U;
+				DEVELOPMENT_TEAM = M7JT4ZMJ42;
 				INFOPLIST_FILE = JiGuanjiesuo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.text;
 				PRODUCT_NAME = "$(TARGET_NAME)";

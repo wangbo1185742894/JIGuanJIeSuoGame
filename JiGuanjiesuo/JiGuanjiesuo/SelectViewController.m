@@ -40,7 +40,9 @@
     playVC.movePass = guanDic[@"movePass"];
     playVC.passLightBtns = guanDic[@"passLightBtns"];
     playVC.pathAllLight = guanDic[@"pathAllLigth"];
-    
+    if ( guanDic[@"changePos"] != nil) {
+        playVC.changePos =  guanDic[@"changePos"];
+    }
     [self presentViewController:playVC animated:YES completion:nil];
 }
 

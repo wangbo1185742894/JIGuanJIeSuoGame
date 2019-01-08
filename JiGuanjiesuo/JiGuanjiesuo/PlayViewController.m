@@ -8,6 +8,7 @@
 // 光线 2000
 // 接受器 3000
 // 改变方向 4000
+// 改变位置 8000
 #import "PlayViewController.h"
 #import "LightSource.h"
 #import "UIView+MJExtension.h"
@@ -15,6 +16,7 @@
 #import "LightGrain.h"
 #import "BtnPassLine.h"
 #import "PassAllLight.h"
+#import "ChangePos.h"
 #define widthm  [UIScreen mainScreen].bounds.size.height / 6
 #define heightm  [UIScreen mainScreen].bounds.size.height / 6
 
@@ -179,6 +181,23 @@ typedef enum : NSUInteger {
            
         }
      
+        for (NSDictionary *moveDic in _changePos) {
+            if ([moveDic[@"index"] integerValue] == i) {
+                ChangePos  *passBtn = [[ChangePos alloc]initWithFrame:CGRectMake(curX, curY, widthm, heightm)];
+                passBtn.isMove = YES;
+                [passBtn addGestureRecognizer:pangesture];
+                imgName = moveDic[@"imgName"];
+                [passBtn setBackgroundImage:[UIImage imageNamed:moveDic[@"imgNameSelect"]] forState:UIControlStateSelected];
+                
+                
+                
+                linePassState = LightPassStatePass;
+                
+                itemImg = passBtn;
+                passBtn.tag  = [moveDic[@"tag"] integerValue] + i;
+                [self.playContentView addSubview:passBtn];
+            }
+        }
         
         if ([_kongbaiArray containsObject:@(i)]){
             isMove  = YES;
@@ -237,6 +256,21 @@ typedef enum : NSUInteger {
                 [self showLine:lightSource + dir  andDir:[itemDir integerValue]];
             }
         }
+        
+        ChangePos *change =[self.view viewWithTag:8000 + lightSource + dir];
+        ChangePos *nextChange;
+        if (change != nil) {
+            change.selected = YES;
+            for (UIButton *item in self.view.subviews) {
+                if ([item isKindOfClass: [ChangePos class]] && item != change) {
+                    nextChange =(ChangePos *) item;
+                    break;
+                }
+            }
+            nextChange.selected = YES;
+            [self showLine:nextChange.tag  andDir:dir];
+        }
+        
         
         PassAllLight *pathAllLight =[self.view viewWithTag:5000 + lightSource + dir];
         if (pathAllLight != nil) {
@@ -383,6 +417,10 @@ typedef enum : NSUInteger {
     NSInteger indexNew = curY * 10  + curX;
     
     if (indexNew > 59 || indexNew < 0) {
+        return;
+    }
+  
+    if (index % 10 == 9 && indexNew % 10 == 0) {
         return;
     }
     if ([self.stateArray[indexNew]  boolValue] == NO) {
