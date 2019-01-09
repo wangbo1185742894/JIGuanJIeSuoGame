@@ -191,7 +191,25 @@ typedef enum : NSUInteger {
                 
                 
                 
-                linePassState = LightPassStatePass;
+                linePassState = LightPassStateWithDir;
+                
+                itemImg = passBtn;
+                passBtn.tag  = [moveDic[@"tag"] integerValue] + i;
+                [self.playContentView addSubview:passBtn];
+            }
+        }
+        
+        
+        for (NSDictionary *moveDic in _changePosNo) {
+            if ([moveDic[@"index"] integerValue] == i) {
+                ChangePos  *passBtn = [[ChangePos alloc]initWithFrame:CGRectMake(curX, curY, widthm, heightm)];
+                passBtn.isMove = NO;
+                imgName = moveDic[@"imgName"];
+                [passBtn setBackgroundImage:[UIImage imageNamed:moveDic[@"imgNameSelect"]] forState:UIControlStateSelected];
+                
+                
+                
+                linePassState = LightPassStateWithDir;
                 
                 itemImg = passBtn;
                 passBtn.tag  = [moveDic[@"tag"] integerValue] + i;

@@ -18,4 +18,5 @@
 @property(nonatomic,strong)NSArray *passLightBtns;
 @property(nonatomic,strong)NSArray *pathAllLight;
 @property(nonatomic,strong)NSArray *changePos;
+@property(nonatomic,strong)NSArray *changePosNo;
 @end
