@@ -30,12 +30,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JiGuanjiesuo/PlayViewController.m"
-            timestampString = "568644325.365405"
+            timestampString = "568693467.456567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "417"
-            endingLineNumber = "417"
-            landmarkName = "-moveHuokuai:"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "-showLine:andDir:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,7 +46,87 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JiGuanjiesuo/PlayViewController.m"
-            timestampString = "568644325.3659821"
+            timestampString = "568693467.456642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "-showLine:andDir:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PlayViewController showLine:andDir:]"
+                  moduleName = "JiGuanjiesuo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangbo/JIGuanJIeSuoGame/JiGuanjiesuo/JiGuanjiesuo/PlayViewController.m"
+                  timestampString = "568692507.7137311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "1588">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PlayViewController showLine:andDir:]"
+                  moduleName = "JiGuanjiesuo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangbo/JIGuanJIeSuoGame/JiGuanjiesuo/JiGuanjiesuo/PlayViewController.m"
+                  timestampString = "568692507.716799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "1604">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JiGuanjiesuo/PlayViewController.m"
+            timestampString = "568693467.456701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "-showLine:andDir:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JiGuanjiesuo/PlayViewController.m"
+            timestampString = "568693467.456754"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "-showLine:andDir:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JiGuanjiesuo/PlayViewController.m"
+            timestampString = "568693467.4568321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "229"

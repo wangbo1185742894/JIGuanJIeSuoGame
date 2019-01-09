@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ChangePos : UIButton
 @property(nonatomic,assign)BOOL isMove;
 @property(nonatomic,assign)NSInteger postion;
+@property(nonatomic,assign)LightDir lightDir;
 
 @end
 

@@ -258,17 +258,19 @@ typedef enum : NSUInteger {
         }
         
         ChangePos *change =[self.view viewWithTag:8000 + lightSource + dir];
+        change.lightDir = dir;
         ChangePos *nextChange;
         if (change != nil) {
             change.selected = YES;
-            for (UIButton *item in self.view.subviews) {
+            for (UIButton *item in self.playContentView.subviews) {
                 if ([item isKindOfClass: [ChangePos class]] && item != change) {
                     nextChange =(ChangePos *) item;
                     break;
                 }
             }
+            nextChange.lightDir = dir;
             nextChange.selected = YES;
-            [self showLine:nextChange.tag  andDir:dir];
+            [self showLine:nextChange.tag - 8000  andDir:dir];
         }
         
         
@@ -442,7 +444,7 @@ typedef enum : NSUInteger {
     [self.stateArray setObject:@NO atIndexedSubscript:indexNew];
     [self.stateArray setObject:@YES atIndexedSubscript:index];
     [self.lineArray setObject:@(LightPassStatePass) atIndexedSubscript:index];
-    if (baseTag == 4000 || baseTag == 5000) {
+    if (baseTag == 4000 || baseTag == 5000||baseTag == 8000) {
         [self.lineArray setObject:@(LightPassStateWithDir) atIndexedSubscript:indexNew];
     }else{
         [self.lineArray setObject:@(LightPassStateNoPass) atIndexedSubscript:indexNew];
@@ -469,6 +471,13 @@ typedef enum : NSUInteger {
             
                 [passAll setBackgroundImage:[UIImage imageNamed:@"4_pass_line_0"] forState:0];
             }
+        }
+        
+        ChangePos *change =[self.view viewWithTag:8000 + i];
+        
+        if (change != nil) {
+            change.selected = NO;
+
         }
     }
     
@@ -569,6 +578,24 @@ typedef enum : NSUInteger {
         leftPassAll =[self.playContentView viewWithTag:5000+acceptor + LightDirLeft] ;
     }
     
+    ChangePos *leftPass;
+    if (acceptor %10 != 0 && left == nil) {
+        leftPass =[self.playContentView viewWithTag:8000+acceptor + LightDirLeft] ;
+    }
+    ChangePos *rightPass;
+    if (acceptor % 10 != 9 && right== nil) {
+        rightPass =[self.playContentView viewWithTag:8000+acceptor + LightDirRight] ;
+    }
+    ChangePos *topPass;
+    if (acceptor/10 > 0 && top == nil) {
+        topPass  =[self.playContentView viewWithTag:8000+ acceptor + LightDirTop] ;
+    }
+    ChangePos *bottomPass;
+    if (acceptor /10<5 && bottom== nil) {
+        bottomPass = [self.playContentView viewWithTag:8000+acceptor + LightDirBottom];
+    }
+    
+    
     NSInteger numLine =0;
     numLine += [self numLightLine:top andDir:LightDirTop];
     numLine += [self numLightLine:left andDir:LightDirLeft];
@@ -582,7 +609,11 @@ typedef enum : NSUInteger {
     numLine += [self numLightPassAll:leftPassAll andDir:LightDirLeft];
     numLine += [self numLightPassAll:bottomPassAll andDir:LightDirBottom];
     numLine += [self numLightPassAll:rightPassAll andDir:LightDirRight];
- 
+    numLine += [self numLightChangePos:topPass andDir:LightDirTop];
+    numLine += [self numLightChangePos:rightPass andDir:LightDirRight];
+    numLine += [self numLightChangePos:leftPass andDir:LightDirLeft];
+    numLine += [self numLightChangePos:bottomPass andDir:LightDirBottom];
+    
     BtnAcceptor *lightSource = [self.view viewWithTag:3000+acceptor];
     
     [lightSource setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"recive_%ld",lightSource.numLines + numLine >4?4:lightSource.numLines + numLine]] forState:0];
@@ -600,6 +631,21 @@ typedef enum : NSUInteger {
     }else if (btnPassAll.passLightNum == 3) {
         return 1;
     }else{
+        return 0;
+    }
+}
+
+
+-(NSInteger)numLightChangePos:(ChangePos*)btnPass andDir:(LightDir)dir{
+    
+    if (btnPass.selected == YES) {
+        if (btnPass.lightDir == -1 * dir) {
+            return 1;
+        }
+        return 0;
+        
+    }else{
+        
         return 0;
     }
 }
