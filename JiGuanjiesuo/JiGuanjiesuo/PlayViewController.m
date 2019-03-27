@@ -69,7 +69,7 @@ typedef enum : NSUInteger {
 //    
 //        _movePass = @[@{@"index":@26,@"tag":@4000,@"imgName":@"2_nomal_1",@"imgNameSelect":@"2_select_1",@"dirs":@[@(LightDirBottom),@(LightDirRight)]},@{@"index":@36,@"tag":@4000,@"imgName":@"2_nomal_2",@"imgNameSelect":@"2_select_2",@"dirs":@[@(LightDirRight),@(LightDirTop)]},@{@"index":@38,@"tag":@4000,@"imgName":@"1_nomal_0",@"imgNameSelect":@"1_select_0",@"dirs":@[@(LightDirLeft),@(LightDirRight)]},@{@"index":@39,@"tag":@4000,@"imgName":@"4_pass_nomal",@"imgNameSelect":@"4_pass_select",@"dirs":@[@(LightDirBottom),@(LightDirLeft),@(LightDirRight),@(LightDirTop)]}];
 //
-//    _kongbaiArray = @[@0,@9,@20,@25,@26,@30,@35,@36,@38,@39,@50,@59];
+//    _kongbaiArray = @[@0,@9,@20,0,@26,@30,@35,@36,@38,@39,@50,@59];
 //    _disables = @[@30,@35];
 //    NSArray *pathAllLight = @[@{@"index":@25,@"tag":@5000,@"imageName":@"4_pass_line_0"},@{@"index":@26,@"tag":@5000,@"imageName":@"4_pass_line_0"},@{@"index":@33,@"tag":@5000,@"imageName":@"4_pass_line_0"},@{@"index":@34,@"tag":@5000,@"imageName":@"4_pass_line_0"}];
  
